@@ -16,12 +16,12 @@ public class passei_ano {
         int bimestrequatro = sc.nextInt();
         int mediabimestre = bimestreum + bimestredois + bimestretres + bimestrequatro;
 
-        if((bimestreum, bimestredois, bimestretres, bimestrequatro >= 6) && (mediabimestre > 26)){
-            System.out.println("Passou");}   
-        else if (bimestretres < 6 && mediabimestre < 26 ){
-        System.out.println("NÃO Passou");}   
-        else if (bimestres < 6 && mediabimestre > 26 ){
-        System.out.println("NÃO Passou");
+        if ((bimestreum, bimestredois, bimestretres, bimestrequatro >= 6) && (mediabimestre > 26)){
+           System.out.println("Passou");
+        }else if (bimestretres < 6 && mediabimestre < 26 ){
+            System.out.println("NÃO Passou");
+        }else if (bimestretres < 6 && mediabimestre > 26 ){
+            System.out.println("NÃO Passou");
 
 
 

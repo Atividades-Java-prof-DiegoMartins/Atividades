@@ -15,13 +15,16 @@ public class atividade_descontao {
         System.out.println("Digite a sua idade: ");
         int idade = sc.nextInt();
     
-        if (user == null || idade < 18){  //posso colocar  condição password < 6 nesse bloco?
+        if ((user == null || idade < 18 || password.length() < 6) ){
+            System.out.println("Cadastrado realizado!");  
             System.out.println("Não cadastrado");
 
         }else if ((password.length() >= 6) && cupom.equals("PROMO10") || cupom.equals("DESCONTO20") || cupom.equals("BLACKFRIDAY") || cupom == null){
             System.out.println("Cadastrado realizado!");
 
         }
+        
+
 
 
     }
