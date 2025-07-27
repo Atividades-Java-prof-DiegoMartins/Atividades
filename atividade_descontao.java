@@ -16,7 +16,7 @@ public class atividade_descontao {
         int idade = sc.nextInt();
     
         if ((user == null || idade < 18 || password.length() < 6) ){
-            System.out.println("Cadastrado realizado!");  
+            //System.out.println("Cadastrado realizado!");  
             System.out.println("Não cadastrado");
 
         }else if ((password.length() >= 6) && cupom.equals("PROMO10") || cupom.equals("DESCONTO20") || cupom.equals("BLACKFRIDAY") || cupom == null){

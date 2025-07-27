@@ -1,8 +1,5 @@
 import java.util.Scanner;
 public class passei_ano {
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Informe a nota do primeiro bimestre: ");
@@ -12,22 +9,28 @@ public class passei_ano {
         System.out.println("Informe a nota do terceiro bimestre: ");
         int bimestretres = sc.nextInt();
         System.out.println("Informe a nota do quarto bimestre: ");
-
         int bimestrequatro = sc.nextInt();
+
         int mediabimestre = bimestreum + bimestredois + bimestretres + bimestrequatro;
 
-        if ((bimestreum, bimestredois, bimestretres, bimestrequatro >= 6) && (mediabimestre > 26)){
-           System.out.println("Passou");
-        }else if (bimestretres < 6 && mediabimestre < 26 ){
-            System.out.println("NÃO Passou");
-        }else if (bimestretres < 6 && mediabimestre > 26 ){
-            System.out.println("NÃO Passou");
+        if ((bimestreum >= 6 && bimestredois  >= 6 && bimestretres >=6 && bimestrequatro >= 6 && mediabimestre >24)){
+            System.out.println("Passou");
+        
+        }else if(bimestreum < 6 || bimestredois < 6 || bimestretres <6 || bimestrequatro < 6 && mediabimestre >24){
+            System.out.println("RECUPERAÇÃO");
 
-
-
-
+        }else if (bimestreum < 6 || bimestredois < 6 || bimestretres <6 || bimestrequatro < 6 && mediabimestre < 24){
+            System.out.println("REPROVADO");
+        } 
+        //ESSE BLOCO DE CÓDIGO, FOI CÓSIGO COM IDIENTAÇÃO ERRADA, TIVE QUE REFAZER TUDO NO CÓDIGO ACIMA
+        //if ((bimestreum >= 6 && bimestredois  >= 6 && bimestretres >=6 && bimestrequatro >= 6 && mediabimestre >=24)){
+            //System.out.println("Passou");
+           //else if (bimestreum < 6 || bimestredois < 6 || bimestretres <6 || bimestrequatro < 6 && mediabimestre <24){
+            //System.out.println("RECUPERAÇÃO");}
+        
+            //else if(bimestretres < 6 && mediabimestre < 26 ){System.out.println("NÃO Passou");}
 
 
     }
-    
 }
+
