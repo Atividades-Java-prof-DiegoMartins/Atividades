@@ -12,10 +12,10 @@ public class listas_exemplo {
         //System.out.println(listanomes.get(1));
         //System.out.println(listanomes.get(2));
 
-        //for (String nomes:listanomes){
-        //    System.out.println(nomes);
+        for (String nomes:listanomes){
+            System.out.println(nomes);
         
-       // }
+        }
 
        //System.out.println(listanomes);
 
