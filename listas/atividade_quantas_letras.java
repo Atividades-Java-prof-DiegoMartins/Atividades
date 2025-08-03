@@ -22,11 +22,10 @@ public class atividade_quantas_letras {
             if (nome.length() > 5 ){
                 listanova.add(nome);
                 int tamanho = listanova.size();
-                System.out.println("Tem " + tamanho + " pessoas na lista, o nome dela é " + listanova);
-
-                
-            }
-            
+                System.out.println("Tem " + tamanho + " pessoa na lista, o nome dela é " + listanova);  
+            } 
+            //DÚVIDA: A cada nome que é add na lista é exibindo o print, se eu add 4 pessoas com nome maior que 5, exibirá 5 linhas printada
+        
         }
 
      }
