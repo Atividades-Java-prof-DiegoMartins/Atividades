@@ -10,15 +10,10 @@ public class atividade_numeros_impares {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Informe um número: ");
-        int num = sc.nextInt();
-        System.out.println("Informe o segundo número: ");
-        int nsegundo = sc.nextInt();
-        System.out.println("Informe o terceiro número: ");
-        int nterceiro = sc.nextInt();
-
-        listnumeros.add(num);
-        listnumeros.add(nsegundo);
-        listnumeros.add(nterceiro);
+       
+        listnumeros.add(sc.nextInt());
+        listnumeros.add(sc.nextInt());
+        listnumeros.add(sc.nextInt());
 
         for(Integer todosnumeros:listnumeros){
             if(todosnumeros % 2 != 0){
