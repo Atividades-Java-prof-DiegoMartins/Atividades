@@ -31,6 +31,6 @@ public class atividade_palavras {
          System.out.println( "Palavrinhas" + novaspalavrinhas);
          System.out.println("Palavrões"  + novospalavroes);
         
-    }
-    
+    } 
+    //DÚVIDA: COMO EXIBIR AS PALAVRAS EM CASA LINHA?
 }
