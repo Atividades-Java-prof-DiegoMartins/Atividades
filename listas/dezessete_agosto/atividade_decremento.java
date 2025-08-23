@@ -2,7 +2,7 @@ package listas.dezessete_agosto;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class teste_atividade {
+public class atividade_decremento {
     public static void main(String[] args) {
         ArrayList<String>nomesaleatorios=new ArrayList<>();
         Scanner sc = new Scanner(System.in);
@@ -12,8 +12,8 @@ public class teste_atividade {
             nomesaleatorios.add(sc.nextLine());
         }
 
-        for (int j=4; j<3; j--){
-            System.out.println("Foram cadastrados " + nomesaleatorios);
+        for (int i=2; i>=0; i--){
+            System.out.println("Foram cadastrados " + nomesaleatorios.get(i) );
         }
         
         
