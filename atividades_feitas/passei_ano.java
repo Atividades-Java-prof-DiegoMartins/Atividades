@@ -1,3 +1,4 @@
+package atividades_feitas;
 import java.util.Scanner;
 public class passei_ano {
     public static void main(String[] args) {
