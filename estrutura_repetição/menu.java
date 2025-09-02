@@ -19,7 +19,7 @@ public class menu {
                 System.out.println("- Doce 1 (R$ 10,90)");
                 System.out.println("- Doce 2 (R$ 12,90)");
                 System.out.println("- Doce 3 (R$ 15,60)");
-                System.out.println("Selecione 1 para doces, 2 para salgados e 0 para sair: ");
+                System.out.println("Selecione 1 para doces, 2 para salgados e 0 para sair: "); //se não fosse essa linha, o menu doces iria exibir pra sempre.
                 opcao = sc.nextInt();
             }else if (opcao == 2){
                 System.out.println("Salgados");
