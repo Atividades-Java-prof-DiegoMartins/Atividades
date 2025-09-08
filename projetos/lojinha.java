@@ -1,9 +1,12 @@
 package projetos;
 import java.util.Scanner;
+import java.util.ArrayList;
 public class lojinha {
     public static void main(String[] args) {
+        ArrayList<String>cadastrados=new ArrayList();
 
         Scanner sc = new Scanner(System.in);
+        Scanner novoprod = new Scanner(System.in);
 
         System.out.println("======================");
         System.out.println("CASAS BAHIA - PRODUTOS");
@@ -22,12 +25,13 @@ public class lojinha {
             int opcao = sc.nextInt();
 
             if (opcao == 1){
-                System.out.println("Estou cadastrando");
-                //adicionar na lista. Criar lista
-                //exibir frase produto cadastrado
+                System.out.println("Informe o nome do produto:");
+                String produto = novoprod.nextLine();
+                cadastrados.add(produto);
+                System.out.println("Produtos cadastrados " + cadastrados); //teste lista
 
             }else if (opcao == 2 ){
-                System.out.println("Listar produtos");
+                System.out.println("produtos cadastrados " + cadastrados);
 
             }else if(opcao == 3){
                 System.out.println("Atualizar produtos");
