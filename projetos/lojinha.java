@@ -34,10 +34,10 @@ public class lojinha {
                 System.out.println("produtos cadastrados " + cadastrados);
 
             }else if(opcao == 3){
-                for (String produtlis:cadastrados){
+                for (String produtlist:cadastrados){
                     System.out.println(cadastrados);
                     System.out.println("Informe qual produto deseja alterar: ");
-                    String produtlist = sc.nextLine();
+                    produtlist = sc.nextLine();
                     
                     if (cadastrados.contains(produtlist)){
                         System.out.println("digite a alteração");
