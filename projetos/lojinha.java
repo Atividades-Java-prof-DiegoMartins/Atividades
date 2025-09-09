@@ -31,26 +31,36 @@ public class lojinha {
                 System.out.println("Produtos cadastrados " + cadastrados); //teste lista
 
             }else if (opcao == 2 ){
-                System.out.println("produtos cadastrados " + cadastrados);
+                if (cadastrados.size() == 0){
+                    System.out.println("Não há produtos cadastrados! ");
+                }else{
+                    System.out.println("Produtos cadastrados" + cadastrados);
+                }
+                
 
             }else if(opcao == 3){
-                for (String produtlist:cadastrados){
-                    System.out.println(cadastrados);
-                    System.out.println("Informe qual produto deseja alterar: ");
-                    produtlist = sc.nextLine();
-                    
-                    if (cadastrados.contains(produtlist)){
-                        System.out.println("digite a alteração");
-                        String produtnew = sc.nextLine();
-                        cadastrados.remove(produtlist);
-                        cadastrados.add(produtnew);
-                        System.out.println("Nova lista " + cadastrados);
+                sc.nextLine();
+                System.out.println("Informe qual produto deseja alterar: ");
+                String produtlist = sc.nextLine();
 
-                    }
+                if (cadastrados.contains(produtlist)){
+                    System.out.println("digite a alteração");
+                    String produtnew = sc.nextLine();
+                    cadastrados.remove(produtlist);
+                    cadastrados.add(produtnew);
+                    System.out.println("Nova lista " + cadastrados);
                 }
-                System.out.println("Atualizar produtos");
+
             }else if(opcao == 4){
-                System.out.println("Remover produto");
+                sc.nextLine();
+                System.out.println("Informe qual o produto você deseja remover: ");
+                String lisprodut=sc.nextLine();
+                
+                if(cadastrados.contains(lisprodut)){
+                    cadastrados.remove(lisprodut);
+                    System.out.println("Nova lista com remoção" + cadastrados);
+
+                }
 
             }else if(opcao == 0){
             break;
