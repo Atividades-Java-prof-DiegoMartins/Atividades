@@ -46,11 +46,8 @@ public class lojinha {
                         cadastrados.add(produtnew);
                         System.out.println("Nova lista " + cadastrados);
 
-
                     }
                 }
-
-
                 System.out.println("Atualizar produtos");
             }else if(opcao == 4){
                 System.out.println("Remover produto");
