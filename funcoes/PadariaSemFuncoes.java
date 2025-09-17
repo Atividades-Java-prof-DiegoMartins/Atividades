@@ -6,9 +6,8 @@ public class PadariaSemFuncoes {
     inicio();
 
     menu();
-    
-    consumo();
 
+    consumo();
 
     System.out.println("=== Obrigado pela preferência ===");
   }
