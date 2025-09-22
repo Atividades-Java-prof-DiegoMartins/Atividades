@@ -9,7 +9,7 @@ public class lojinha {
         Scanner novoprod = new Scanner(System.in);
 
         System.out.println("======================");
-        System.out.println("CASAS BAHIA - PRODUTOS");
+        System.out.println("MINHA LOJA - PRODUTOS");
         System.out.println("======================");
         System.out.println(" 1 - Cadastrar produtos");
         System.out.println(" 2 - Listar produtos");
