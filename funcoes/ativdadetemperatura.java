@@ -10,15 +10,14 @@ public class ativdadetemperatura {
         System.out.println("Escolha 1 para converter em Celsius e 2 para Fahrenheit!");
 
         while(true){
+            
 
             System.out.println("Escolha uma opção de conversão de temperatura. ");
             int opcao = sc.nextInt();
             
             if(opcao == 1){
-                System.out.println("Qual o valor que você quer converter: ");
-                double f = sc.nextDouble();
-                double c = (f - 32) * (5/9);
-                System.out.println(f + " Em Celsius é " + c);
+                double conversaoc = convercelsius(sc);
+                convercelsius(sc); 
 
             }
 
@@ -35,13 +34,17 @@ public class ativdadetemperatura {
 
         
     }
-    //public static double convercelsius(Scanner sc){
-        //System.out.println("Qual o valor que você quer converter: ");
-        //double f = sc.nextDouble();
-        //double c = (f - 32) * (5/9);
-        //System.out.println(f + " Em Celsius é " + c);
-        //return f;
+    public static double convercelsius(Scanner sc){
+        System.out.println("Qual o valor que você quer converter: ");
+        double f = sc.nextDouble();
+        double c = (f - 32) * (5/9);
+        System.out.println(f + " Em Celsius é " + c);
+        return f;
        
-    //}
+    }
+
+    public static void converfarenheit (){
+        
+    }
     
 }
