@@ -8,16 +8,7 @@ public class lojinha {
         Scanner sc = new Scanner(System.in);
         Scanner novoprod = new Scanner(System.in);
 
-        System.out.println("======================");
-        System.out.println("MINHA LOJA - PRODUTOS");
-        System.out.println("======================");
-        System.out.println(" 1 - Cadastrar produtos");
-        System.out.println(" 2 - Listar produtos");
-        System.out.println(" 3 - Atualizar produtos");
-        System.out.println(" 4 - Removerr produtos");
-        System.out.println(" 0 - Sair");
-
-        
+        apresentacao();
 
         while(true){
 
@@ -66,13 +57,19 @@ public class lojinha {
             break;
             }
 
-        }
-
-
-
-
-
-        
+        }   
     }
+
+    public static void apresentacao (){
+        System.out.println("======================");
+        System.out.println("MINHA LOJA - PRODUTOS");
+        System.out.println("======================");
+        System.out.println(" 1 - Cadastrar produtos");
+        System.out.println(" 2 - Listar produtos");
+        System.out.println(" 3 - Atualizar produtos");
+        System.out.println(" 4 - Removerr produtos");
+        System.out.println(" 0 - Sair");
+    }
+
     
 }

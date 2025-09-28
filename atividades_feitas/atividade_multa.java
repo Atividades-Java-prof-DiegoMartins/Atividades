@@ -5,9 +5,6 @@ import java.util.Scanner;
 public class atividade_multa {
     public static void main(String[] args) {
 
-        calculos();
-
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Qual o limite da velocidade? ");
         int veloc = sc.nextInt();
@@ -35,8 +32,4 @@ public class atividade_multa {
 
     }
 
-    public static void calculos() {
-        
-        
-    }
 }
