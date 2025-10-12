@@ -24,7 +24,7 @@ public class ativdadetemperatura {
             else if (opcao == 2){
                 System.out.println("Qual o valor que você quer converter: ");
                 double c = sc.nextDouble();
-                double conversaof = convercelsius(c);
+                double conversaof = converfarenheit(c);
                 System.out.println(c + "Celsius" +  "Em Fahrenheit é " + conversaof );
 
             }
