@@ -6,44 +6,42 @@ public class ativdadetemperatura {
         Scanner sc = new Scanner (System.in);
         //double conversaoc = convercelsius(sc);
 
-
         System.out.println("Escolha 1 para converter em Celsius e 2 para Fahrenheit!");
 
         while(true){
-            
 
             System.out.println("Escolha uma opção de conversão de temperatura. ");
             int opcao = sc.nextInt();
             
             if(opcao == 1){
-                double conversaoc = convercelsius(sc);
-                convercelsius(sc); 
+                System.out.println("Qual o valor que você quer converter: ");
+                double f = sc.nextDouble();
+                double conversaoc = convercelsius(f);
+                System.out.println(f + "Fahrenheit" + "Em Celcius " + "é " + conversaoc);
 
             }
 
             else if (opcao == 2){
                 System.out.println("Qual o valor que você quer converter: ");
                 double c = sc.nextDouble();
-                double f = (c * 9 / 5) + 32;
-                System.out.println(c + " Em Fahrenheit é " + f);
+                double conversaof = convercelsius(c);
+                System.out.println(c + "Celsius" +  "Em Fahrenheit é " + conversaof );
 
             }
             break;
         
         }
-
         
     }
-    public static double convercelsius(Scanner sc){
-        System.out.println("Qual o valor que você quer converter: ");
-        double f = sc.nextDouble();
+    public static double convercelsius(double f){
         double c = (f - 32) * (5/9);
-        System.out.println(f + " Em Celsius é " + c);
-        return f;
+        return c;
        
     }
 
-    public static void converfarenheit (){
+    public static double converfarenheit (double c){
+        double f = (c * 9 / 5) + 32;
+        return f;
         
     }
     
