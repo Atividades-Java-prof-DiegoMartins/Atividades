@@ -9,11 +9,10 @@ public class delivery {
 
     System.out.println("=== Fome de Tech - Checkout ===");
 
-    System.out.print("Nome do cliente: ");
-    String cliente = sc.nextLine();
+    String cliente = nomecliente(sc);
 
-    System.out.print("Quantos itens diferentes deseja cadastrar? ");
-    int n = sc.nextInt(); sc.nextLine();
+    int n = quantidadeproduto(sc);
+
     double subtotal = 0.0;
 
     for (int i = 1; i <= n; i++) {
@@ -31,11 +30,9 @@ public class delivery {
       System.out.println("Subtotal parcial: R$ " + String.format("%.2f", subtotal));
     }
 
-    System.out.print("\nDistância até o cliente (km): ");
-    double distanciaKm = sc.nextDouble(); sc.nextLine();
-    double calcfret = calcfrete(distanciaKm);
-    
-    // R$5 + R$1,20 por km 
+    double calcfret = calcfrete (sc);
+
+    // R$5 + R$1,20 por km
 
     System.out.print("Cupom (FOME10, FRETEGRATIS ou ENTER para nenhum): ");
     String cupom = sc.nextLine().trim();
@@ -44,7 +41,7 @@ public class delivery {
     if (cupom.equalsIgnoreCase("FOME10")) {
       desconto = subtotal * 0.10; // 10% no subtotal
     } else if (cupom.equalsIgnoreCase("FRETEGRATIS")) {
-      if (distanciaKm <= 10.0) {
+      if (calcfret <= 10.0) {
         calcfret = 0.0; // zera frete até 10 km
       } else {
         calcfret = calcfret / 2.0; // metade do frete se passar de 10 km
@@ -92,10 +89,23 @@ public class delivery {
 
     }
 
-    public static double calcfrete (double distanckm ){
-        double freteBase = 5.00;
-        double frete = freteBase + (1.20 * distanckm); // R$5 + R$1,20 por km
-        return frete;
+    public static String nomecliente(Scanner sc) {
+      System.out.print("Nome do cliente: ");
+      String cliente = sc.nextLine();
+      return cliente;
+    }
+
+    public static int quantidadeproduto(Scanner sc) {
+      System.out.print("Quantos itens diferentes deseja cadastrar? ");
+      int n = sc.nextInt(); sc.nextLine();
+      return n;
+    }
+    public static double calcfrete (Scanner sc ){
+      System.out.print("\nDistância até o cliente (km): ");
+      double distanciaKm = sc.nextDouble(); sc.nextLine();
+      double freteBase = 5.00;
+      double frete = freteBase + (1.20 * distanciaKm); // R$5 + R$1,20 por km
+      return frete;
 
     }
     
