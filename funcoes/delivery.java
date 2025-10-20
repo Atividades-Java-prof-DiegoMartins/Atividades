@@ -13,29 +13,13 @@ public class delivery {
 
     int n = quantidadeproduto(sc);
 
-    double subtotal = 0.0;
-
-    for (int i = 1; i <= n; i++) {
-      System.out.println("\nItem #" + i);
-      System.out.print("Nome do item: ");
-      String nomeItem = sc.nextLine();
-      System.out.print("Preço unitário: ");
-      double preco = sc.nextDouble();
-      System.out.print("Quantidade: ");
-      int qtd = sc.nextInt(); sc.nextLine();
-
-      double totalItem = preco * qtd;
-      subtotal += totalItem;
-
-      System.out.println("Subtotal parcial: R$ " + String.format("%.2f", subtotal));
-    }
+    double subtotal = subtotall(sc, n);
 
     double calcfret = calcfrete (sc);
 
     // R$5 + R$1,20 por km
 
-    System.out.print("Cupom (FOME10, FRETEGRATIS ou ENTER para nenhum): ");
-    String cupom = sc.nextLine().trim();
+    String cupom = cupomuser(sc);
 
     double desconto = 0.0;
     if (cupom.equalsIgnoreCase("FOME10")) {
@@ -52,8 +36,7 @@ public class delivery {
 
     double total = subtotal - desconto + calcfret;
 
-    System.out.print("\nForma de pagamento (pix / credito / dinheiro): ");
-    String pagamento = sc.nextLine().trim();
+    String pagamento = tipopagamento(sc);
 
     double troco = 0.0;
     if (pagamento.equalsIgnoreCase("dinheiro")) {
@@ -89,6 +72,8 @@ public class delivery {
 
     }
 
+    //Funções criadas!
+
     public static String nomecliente(Scanner sc) {
       System.out.print("Nome do cliente: ");
       String cliente = sc.nextLine();
@@ -100,6 +85,28 @@ public class delivery {
       int n = sc.nextInt(); sc.nextLine();
       return n;
     }
+
+    public static double subtotall (Scanner sc, int n ) {
+
+      double subtotal = 0.0;
+
+    for (int i = 1; i <= n; i++) {
+      System.out.println("\nItem #" + i);
+      System.out.print("Nome do item: ");
+      String nomeItem = sc.nextLine();
+      System.out.print("Preço unitário: ");
+      double preco = sc.nextDouble();
+      System.out.print("Quantidade: ");
+      int qtd = sc.nextInt(); sc.nextLine();
+
+      double totalItem = preco * qtd;
+      subtotal += totalItem;
+
+      System.out.println("Subtotal parcial: R$ " + String.format("%.2f", subtotal));
+    }
+      return subtotal;
+    }
+
     public static double calcfrete (Scanner sc ){
       System.out.print("\nDistância até o cliente (km): ");
       double distanciaKm = sc.nextDouble(); sc.nextLine();
@@ -108,5 +115,24 @@ public class delivery {
       return frete;
 
     }
+
+    public static String cupomuser (Scanner sc) {
+      System.out.print("Cupom (FOME10, FRETEGRATIS ou ENTER para nenhum): ");
+      String cupom = sc.nextLine().trim();
+      return cupom;
+      
+    }
+
+    public static String tipopagamento (Scanner sc) {
+      System.out.print("\nForma de pagamento (pix / credito / dinheiro): ");
+      String pagamento = sc.nextLine().trim();
+      return pagamento;
+    }
+
+  
+
+     
+
+    
     
 }
