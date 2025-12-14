@@ -21,8 +21,6 @@ public class atividade_numeros_impares {
 
             }
         }
-
-
     }
     
 }

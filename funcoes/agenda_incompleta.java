@@ -18,6 +18,7 @@ public class agenda_incompleta {
       System.out.println("Selecione uma opção: ");
       int opcao = sc.nextInt();
       sc.nextLine(); // consome
+      
       if (opcao == 1) {
 
 
