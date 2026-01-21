@@ -1,6 +1,7 @@
 package listas.dezessete_agosto;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 public class passei_de_ano {
     public static void main(String[] args) {
@@ -8,7 +9,8 @@ public class passei_de_ano {
 
         Scanner sc = new Scanner(System.in);
 
-        for(int i=0; i<5; i++){
+        try {
+            for(int i=0; i<5; i++){
             System.out.println("Informe a sua nota: ");
             notas.add(sc.nextFloat());
 
@@ -24,7 +26,11 @@ public class passei_de_ano {
         }else if (media < 5.0){
             System.out.println("Você está REPROVADO!");
         }
-        
+
+        } catch (InputMismatchException e){
+            System.out.println("Informe um número válido e não uma palavra!!!");
+
+        } 
     }
 } 
 //Observações: cometi o erro de colocar as condições dentro do segundo for e na condição recuperação tivi dififulcade atender a regra. 

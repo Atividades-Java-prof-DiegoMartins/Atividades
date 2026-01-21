@@ -15,15 +15,11 @@ public class calculadora {
             
             int resultado = tabuada * i;
 
-            System.out.println(tabuada + "X" + i + "=" + resultado) ;
-
-
+            System.out.println(tabuada + "X" + i + "=" + resultado);
         }
          }catch(InputMismatchException e){
             System.out.println("Informe um número interiro e não uma palavra");
         }
-        
-
         
     }
     

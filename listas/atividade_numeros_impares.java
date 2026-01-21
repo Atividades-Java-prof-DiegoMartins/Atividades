@@ -2,6 +2,7 @@ package listas;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 
 public class atividade_numeros_impares {
@@ -11,6 +12,7 @@ public class atividade_numeros_impares {
 
         System.out.println("Informe um número: ");
        
+        try {
         listnumeros.add(sc.nextInt());
         listnumeros.add(sc.nextInt());
         listnumeros.add(sc.nextInt());
@@ -21,6 +23,13 @@ public class atividade_numeros_impares {
 
             }
         }
+
+        }catch (InputMismatchException e){
+            System.out.println("Informe um Número válido e não uma palavra!!!");
+
+        }
+
+        
     }
     
 }

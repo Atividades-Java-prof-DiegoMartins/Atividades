@@ -14,6 +14,9 @@ public class lojinha {
 
             System.out.println("Escolha uma opção: ");
             int opcao = sc.nextInt();
+            if (opcao <0 || opcao >4 ){
+                System.out.println("Número inválido!");
+            }
 
             if (opcao == 1){
                 System.out.println("Informe o nome do produto:");
